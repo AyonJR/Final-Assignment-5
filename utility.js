@@ -3,6 +3,7 @@ let seatButtons = document.getElementsByClassName('btn')
 for(let seatButton of seatButtons){
     seatButton.addEventListener('click',function(e){
         seatButton.classList.add('bg-green-400') ; 
+        
     
     let innerText = seatAvailable('availabe-seats') ;
     let newInnerText = innerText - 1 ; 
@@ -29,9 +30,21 @@ let innerTextClass = document.getElementById('classId').appendChild(createElemen
 let createElementPrice = createElementById('li') 
 createElementPrice.innerText = '550'
   
-let innerTextPrice = document.getElementById('priceId').appendChild(createElementPrice)
+let innerTextPrice = document.getElementById('priceId').appendChild(createElementPrice) 
+let convertedInnerTextPrice = parseInt(createElementPrice.innerText)
+console.log(convertedInnerTextPrice)
+
+// getting the total cost
+let totalCost = seatAvailable('total-price')
+ let convertedTotalCost = parseInt(totalCost)
+  document.getElementById('total-price').innerText = convertedTotalCost + convertedInnerTextPrice ;
+    
+//   seatButton.disabled= true;
 
     })
+
+  
+   
    
 }
 
