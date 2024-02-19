@@ -96,10 +96,9 @@ let modal = document.getElementById('next-button') ;
 modal.addEventListener('click', function(){
   console.log('clicked')
 })
-
+seatButton.style.pointerEvents = 'none';
 
 }) 
-
 
 
    
