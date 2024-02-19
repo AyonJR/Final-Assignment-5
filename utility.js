@@ -1,9 +1,11 @@
-let seatButtons = document.getElementsByClassName('btn')
+let seatButtons = document.getElementsByClassName('btn');
+let maxClicks = 4;
+let clicksCount = 0;
 
 for(let seatButton of seatButtons){
     seatButton.addEventListener('click',function(e){
-        seatButton.classList.add('bg-green-400') ; 
-        
+      if (clicksCount < maxClicks) {
+        seatButton.classList.add('bg-green-400');    
     
     let innerText = seatAvailable('availabe-seats') ;
     let newInnerText = innerText - 1 ; 
@@ -37,14 +39,48 @@ console.log(convertedInnerTextPrice)
 // getting the total cost
 let totalCost = seatAvailable('total-price')
  let convertedTotalCost = parseInt(totalCost)
-  document.getElementById('total-price').innerText = convertedTotalCost + convertedInnerTextPrice ;
+ let finalTotalCost = document.getElementById('total-price').innerText = convertedTotalCost + convertedInnerTextPrice ;
     
-//   seatButton.disabled= true;
+  // seatButton.disabled= true;
 
-    })
+// getting the grand total
+let grandTotalCost = seatAvailable('grand-total')
+ let convertedGrandTotalCost = parseInt(grandTotalCost)
+ let finalGrandTotalCost = document.getElementById('grand-total').innerText = convertedGrandTotalCost + convertedInnerTextPrice ;
 
-  
    
+ clicksCount++ ; 
+ seatButtons.disabled = true ; 
+ if(clicksCount===1){
+  document.getElementById('next-button').disabled = false ;
+ }
+
+}
+
+// coupon discount
+let applyButton = document.getElementById('apply-button')
+ applyButton.addEventListener('click',function(){
+ let inputField = document.getElementById('input-coupon') ;
+ if(inputField.value == 'NEW15'){
+  let abarInputField = document.getElementById('input-coupon') ;
+  abarInputField.classList.add('hidden') ;
+  let abarApplyButton = document.getElementById('apply-button');
+  abarApplyButton.classList.add('hidden')
+ }
+ if(inputField.value == 'Couple 20'){
+  let abarInputField = document.getElementById('input-coupon') ;
+  abarInputField.classList.add('hidden') ;
+  let abarApplyButton = document.getElementById('apply-button');
+  abarApplyButton.classList.add('hidden')
+ }
+
+
+})
+
+
+})
+
+ 
    
 }
 
