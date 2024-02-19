@@ -92,6 +92,11 @@ let applyButton = document.getElementById('apply-button')
 
 })
 
+let modal = document.getElementById('next-button') ; 
+modal.addEventListener('click', function(){
+  console.log('clicked')
+})
+
 
 })
 
