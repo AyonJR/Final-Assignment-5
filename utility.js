@@ -65,13 +65,28 @@ let applyButton = document.getElementById('apply-button')
   let abarInputField = document.getElementById('input-coupon') ;
   abarInputField.classList.add('hidden') ;
   let abarApplyButton = document.getElementById('apply-button');
-  abarApplyButton.classList.add('hidden')
+  abarApplyButton.classList.add('hidden');
+  let discountGrandTotal = document.getElementById('grand-total').innerText ; 
+  let convertedDiscountGrandTotal = parseInt(discountGrandTotal)
+  let totalCost = parseInt(document.getElementById('total-price').innerText)
+  let discount = (15*totalCost)/100 ;
+  let finalDiscount = totalCost - discount ;
+  document.getElementById('grand-total').innerText = Math.round(finalDiscount) ;
  }
+ 
+ 
+ 
  if(inputField.value == 'Couple 20'){
   let abarInputField = document.getElementById('input-coupon') ;
   abarInputField.classList.add('hidden') ;
   let abarApplyButton = document.getElementById('apply-button');
   abarApplyButton.classList.add('hidden')
+  let discountGrandTotal = document.getElementById('grand-total').innerText ; 
+  let convertedDiscountGrandTotal = parseInt(discountGrandTotal)
+  let totalCost = parseInt(document.getElementById('total-price').innerText)
+  let discount = (20*totalCost)/100 ;
+  let finalDiscount = totalCost - discount ;
+  document.getElementById('grand-total').innerText = Math.round(finalDiscount) ;
  }
 
 
