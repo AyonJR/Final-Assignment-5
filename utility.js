@@ -98,9 +98,10 @@ modal.addEventListener('click', function(){
 })
 
 
-})
+}) 
 
- 
+
+
    
 }
 
@@ -121,6 +122,7 @@ let elementCreated = document.createElement(elementId)
 return elementCreated ;
 } 
 
+// function for reloading the page
 let continueButton = document.getElementById('continueButton')
 continueButton.addEventListener('click',function(){
   window.location.reload()
