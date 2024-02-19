@@ -6,7 +6,8 @@
     <title>Bus-Ticket-Landing-Page</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
-   <script src="https://cdn.tailwindcss.com"></script>
+   <script src="https://cdn.tailwindcss.com"></script> 
+   
 
 </head>
 <body>
@@ -29,7 +30,7 @@
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1 font-medium">
-                <li><a>Home</a></li>
+                <li><a >Home</a></li>
                 <li><a>About</a></li>
                 <li><a>Destination</a></li>
                 <li><a>Search</a></li>
@@ -38,9 +39,11 @@
             <!-- <div class="navbar-end">
               <a class="btn bg-green-600 bg-opacity-10 text-green-500 border-green-500" >Bus <img src="./images/bus-icon.png" alt=""></a>
             </div> -->
-            <div class="navbar-end">
-              <a class=" bg-green-600 bg-opacity-10 text-green-500 border-green-500" ><p>Bus</p> <img src="./images/bus-icon.png" alt=""></a>
-            </div>
+           <div class="navbar-end flex">
+            <button class="btn-ghost justify-center text-center items-center gap-2 w-36 rounded-xl py-4 flex bg-green-600 bg-opacity-10 text-green-500 border-green-500 "><p class="font-semibold text-xl">Bus</p><div class="pt-1">
+              <img src="./images/bus-icon.png" alt="">
+            </div></button> 
+           </div>
             
           </div>
     </section>
@@ -52,7 +55,7 @@
           <div class="max-w-md">
             <h1 class="mb-5 text-5xl font-bold">End-to-End Travel with <span class="text-green-600">P Paribahan</span></h1>
             <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-            <button class="w-32 h-12 rounded-xl btn-ghost buy bg-green-600 border-green-600 text-slate-800 font-bold">Buy Tickets</button>
+            <button  class="w-32 h-12 rounded-xl btn-ghost buy bg-green-600 border-green-600 text-white font-bold"><a href="#ph">Buy Tickets</a></button>
           </div>
         </div>
       </div>
@@ -121,7 +124,7 @@
  </section>
 
 <!-- PH Paribahan section -->
-<section class="mt-32 border-t-2 border-green-500 rounded-[48px] bg-gray-50">
+<section id="ph" class="mt-32 border-t-2 border-green-500 rounded-[48px] bg-gray-50">
 
     <div class="flex justify-center mt-24">
         <h2 class="font-bold text-3xl">P.H Paribahan</h2>
@@ -160,6 +163,12 @@
               </div>
             </div>
          </div>
+
+
+         <!-- <div class="navbar-end flex">
+            <button class="btn-ghost justify-center text-center items-center gap-2 w-36 rounded-xl py-4 flex bg-green-600 bg-opacity-10 text-green-500 border-green-500 "><p class="font-semibold text-xl">Bus</p><div class="pt-1">
+              <img src="./images/bus-icon.png" alt="">
+            </div></button>  -->
      <!-- text area div -->
     
        <div class="bg-gray-50 w-full rounded-2xl ">
@@ -187,13 +196,13 @@
       
     <div class="flex justify-between p-8 ">
             <div>
-                <button class="btn">Boarding Point - Laxmipur</button> 
+                <button class="btn-ghost w-56 rounded-xl py-4">Boarding Point - Laxmipur</button> 
             </div>    
             <div>
-                <button class="btn">Dropping Point - Bogura</button>     
+                <button class="btn-ghost w-56 rounded-xl py-4">Dropping Point - Bogura</button>     
            </div>
            <div>
-            <button class="btn">Est. Time - 11 Hour</button>     
+            <button class="btn-ghost w-56 rounded-xl py-4">Est. Time - 11 Hour</button>     
        </div>
     </div>
 </div>
@@ -241,7 +250,7 @@
           </div>
     <!-- div of driver button -->
         <div class="mt-8 flex justify-end pb-8 pr-3">
-            <button class="btn"><img class="w-6 mx-5 opacity-80" src="./images/steering-wheel.png" alt=""></button> 
+            <button class="btn-ghost w-36 rounded-xl py-4 flex justify-center"><img class="w-6 mx-5 opacity-80" src="./images/steering-wheel.png" alt=""></button> 
         </div>
 
         <!-- div of the train sits -->
@@ -401,7 +410,7 @@
       <div class="modal-action">
         <form method="dialog">
           <!-- if there is a button in form, it will close the modal -->
-          <button class="btn-ghost border-green-400 bg-green-400 font-semibold text-white text-xl w-64 h-12 rounded-xl">Continue</button>
+          <button id="continueButton" class="btn-ghost border-green-400 bg-green-400 font-semibold text-white text-xl w-64 h-12 rounded-xl">Continue</button>
         </form>
       </div>
     </div>

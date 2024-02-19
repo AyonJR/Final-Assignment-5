@@ -121,3 +121,7 @@ let elementCreated = document.createElement(elementId)
 return elementCreated ;
 } 
 
+let continueButton = document.getElementById('continueButton')
+continueButton.addEventListener('click',function(){
+  window.location.reload()
+})
